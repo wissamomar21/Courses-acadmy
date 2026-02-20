@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Courses - Konned</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primaryBlue: "#3B82F6"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-base-100">
+
+<div class="navbar bg-base-100 px-4 sm:px-6 lg:px-10 shadow-sm fixed top-0 left-0 w-full z-50">
+    <div class="navbar-start">
+      <div class="dropdown lg:hidden">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="all-courses.html">All Courses</a></li>
+          <li><a class="text-primaryBlue font-medium">My Courses</a></li>
+          <li><a>About Us</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-primaryBlue text-white rounded-lg flex items-center justify-center font-bold text-lg">
+          K
+        </div>
+        <span class="font-semibold text-lg sm:text-xl">konned</span>
+      </a>
+    </div>
+
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 gap-2 font-medium">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="all-courses.html">All Courses</a></li>
+        <li><a class="text-primaryBlue border-b-2 border-primaryBlue rounded-none">My Courses</a></li>
+        <li><a>About Us</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="navbar-end gap-2 sm:gap-4">
+      <input type="text" placeholder="Search your courses..."
+        class="input input-bordered input-sm sm:input-md w-32 sm:w-48 md:w-64 rounded-full hidden sm:block" />
+
+      <div class="indicator">
+        <span class="indicator-item badge badge-error badge-xs"></span>
+        <button class="btn btn-ghost btn-circle btn-sm sm:btn-md">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+        </button>
+      </div>
+
+      <button class="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden ring-2 ring-offset-2 ring-primaryBlue">
+        <a href="profile.html">
+          <img src="https://cdn-icons-png.flaticon.com/128/3242/3242257.png"
+              alt="User" class="w-full h-full object-cover">
+        </a>
+      </button>
+    </div>
+</div>
+
+<section class="pt-28 pb-16 px-4 sm:px-6 lg:px-10 bg-gradient-to-br from-base-100 to-base-200">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-12">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">My Learning Journey</h1>
+      <p class="text-gray-500 max-w-2xl mx-auto">
+        Continue learning from where you left off and track your progress
+      </p>
+    </div>
+
+    <div class="stats shadow w-full mb-8 grid grid-cols-1 sm:grid-cols-3">
+      <div class="stat place-items-center">
+        <div class="stat-title">Enrolled Courses</div>
+        <div class="stat-value text-primaryBlue">5</div>
+        <div class="stat-desc">Active learning</div>
+      </div>
+
+      <div class="stat place-items-center">
+        <div class="stat-title">Completed</div>
+        <div class="stat-value text-success">2</div>
+        <div class="stat-desc">Certificates earned</div>
+      </div>
+
+      <div class="stat place-items-center">
+        <div class="stat-title">Hours Learned</div>
+        <div class="stat-value text-secondary">48</div>
+        <div class="stat-desc">This month</div>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3 justify-center mb-8">
+      <button class="btn btn-primary rounded-full px-6">All</button>
+      <button class="btn btn-outline rounded-full px-6">In Progress</button>
+      <button class="btn btn-outline rounded-full px-6">Completed</button>
+    </div>
+  </div>
+</section>
+
+<section class="px-4 sm:px-6 lg:px-10 py-16 bg-base-100">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+      <h2 class="text-2xl font-bold">Continue Learning</h2>
+      <select class="select select-bordered rounded-xl">
+        <option>Sort by: Recently Accessed</option>
+        <option>Progress: High to Low</option>
+        <option>Progress: Low to High</option>
+        <option>Name: A to Z</option>
+      </select>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <a href="course-viewer.html?id=1" class="card bg-base-100 shadow-xl rounded-2xl hover:shadow-2xl transition cursor-pointer">
+        <figure class="relative">
+          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1200" class="h-48 w-full object-cover"/>
+          <div class="absolute top-4 right-4">
+            <div class="radial-progress text-primaryBlue bg-white" style="--value:65; --size:3.5rem; --thickness:4px;" role="progressbar">
+              <span class="text-xs font-bold">65%</span>
+            </div>
+          </div>
+          <div class="absolute top-4 left-4 badge badge-warning px-3 py-2">In Progress</div>
+        </figure>
+        <div class="card-body p-5">
+          <div class="badge badge-outline mb-2">Design</div>
+          <h3 class="font-bold text-lg">UX Design Fundamentals</h3>
+          <p class="text-sm text-gray-500">By Ahmed Mohamed</p>
+
+          <div class="flex items-center gap-4 text-sm mt-2 text-gray-500">
+            <span>⭐ 4.8</span>
+            <span>👥 1,234 students</span>
+          </div>
+
+          <div class="mt-2 text-sm text-gray-500">
+            <span>⏱ 8 Hours • 45 Lessons</span>
+          </div>
+
+          <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+            <div class="bg-primaryBlue h-2 rounded-full" style="width: 65%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">29 of 45 lessons completed</p>
+
+          <button class="btn btn-primary w-full mt-4 rounded-xl">Continue Learning</button>
+        </div>
+      </a>
+
+      <a href="course-viewer.html?id=2" class="card bg-base-100 shadow-xl rounded-2xl hover:shadow-2xl transition cursor-pointer">
+        <figure class="relative">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200" class="h-48 w-full object-cover"/>
+          <div class="absolute top-4 right-4">
+            <div class="radial-progress text-primaryBlue bg-white" style="--value:42; --size:3.5rem; --thickness:4px;" role="progressbar">
+              <span class="text-xs font-bold">42%</span>
+            </div>
+          </div>
+          <div class="absolute top-4 left-4 badge badge-warning px-3 py-2">In Progress</div>
+        </figure>
+        <div class="card-body p-5">
+          <div class="badge badge-outline mb-2">Programming</div>
+          <h3 class="font-bold text-lg">Full Stack Web Development</h3>
+          <p class="text-sm text-gray-500">By Omar Ibrahim</p>
+
+          <div class="flex items-center gap-4 text-sm mt-2 text-gray-500">
+            <span>⭐ 4.9</span>
+            <span>👥 3,421 students</span>
+          </div>
+
+          <div class="mt-2 text-sm text-gray-500">
+            <span>⏱ 24 Hours • 120 Lessons</span>
+          </div>
+
+          <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+            <div class="bg-primaryBlue h-2 rounded-full" style="width: 42%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">50 of 120 lessons completed</p>
+
+          <button class="btn btn-primary w-full mt-4 rounded-xl">Continue Learning</button>
+        </div>
+      </a>
+
+      <a href="course-viewer.html?id=3" class="card bg-base-100 shadow-xl rounded-2xl hover:shadow-2xl transition cursor-pointer">
+        <figure class="relative">
+          <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1200" class="h-48 w-full object-cover"/>
+          <div class="absolute top-4 right-4">
+            <div class="radial-progress text-success bg-white" style="--value:100; --size:3.5rem; --thickness:4px;" role="progressbar">
+              <span class="text-xs font-bold">✓</span>
+            </div>
+          </div>
+          <div class="absolute top-4 left-4 badge badge-success px-3 py-2">Completed</div>
+        </figure>
+        <div class="card-body p-5">
+          <div class="badge badge-outline mb-2">Programming</div>
+          <h3 class="font-bold text-lg">JavaScript Mastery</h3>
+          <p class="text-sm text-gray-500">By Amira Nasser</p>
+
+          <div class="flex items-center gap-4 text-sm mt-2 text-gray-500">
+            <span>⭐ 4.8</span>
+            <span>👥 2,789 students</span>
+          </div>
+
+          <div class="mt-2 text-sm text-gray-500">
+            <span>⏱ 15 Hours • 75 Lessons</span>
+          </div>
+
+          <div class="w-full bg-success rounded-full h-2 mt-3">
+            <div class="bg-success h-2 rounded-full" style="width: 100%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">All lessons completed</p>
+
+          <button class="btn btn-outline btn-success w-full mt-4 rounded-xl">Review Course</button>
+        </div>
+      </a>
+
+      <a href="course-viewer.html?id=4" class="card bg-base-100 shadow-xl rounded-2xl hover:shadow-2xl transition cursor-pointer">
+        <figure class="relative">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200" class="h-48 w-full object-cover"/>
+          <div class="absolute top-4 right-4">
+            <div class="radial-progress text-primaryBlue bg-white" style="--value:25; --size:3.5rem; --thickness:4px;" role="progressbar">
+              <span class="text-xs font-bold">25%</span>
+            </div>
+          </div>
+          <div class="absolute top-4 left-4 badge badge-warning px-3 py-2">In Progress</div>
+        </figure>
+        <div class="card-body p-5">
+          <div class="badge badge-outline mb-2">Marketing</div>
+          <h3 class="font-bold text-lg">Digital Marketing Fundamentals</h3>
+          <p class="text-sm text-gray-500">By Mona Farid</p>
+
+          <div class="flex items-center gap-4 text-sm mt-2 text-gray-500">
+            <span>⭐ 4.7</span>
+            <span>👥 1,567 students</span>
+          </div>
+
+          <div class="mt-2 text-sm text-gray-500">
+            <span>⏱ 9 Hours • 48 Lessons</span>
+          </div>
+
+          <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+            <div class="bg-primaryBlue h-2 rounded-full" style="width: 25%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">12 of 48 lessons completed</p>
+
+          <button class="btn btn-primary w-full mt-4 rounded-xl">Continue Learning</button>
+        </div>
+      </a>
+
+      <a href="course-viewer.html?id=5" class="card bg-base-100 shadow-xl rounded-2xl hover:shadow-2xl transition cursor-pointer">
+        <figure class="relative">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200" class="h-48 w-full object-cover"/>
+          <div class="absolute top-4 right-4">
+            <div class="radial-progress text-success bg-white" style="--value:100; --size:3.5rem; --thickness:4px;" role="progressbar">
+              <span class="text-xs font-bold">✓</span>
+            </div>
+          </div>
+          <div class="absolute top-4 left-4 badge badge-success px-3 py-2">Completed</div>
+        </figure>
+        <div class="card-body p-5">
+          <div class="badge badge-outline mb-2">Business</div>
+          <h3 class="font-bold text-lg">Data Analytics for Business</h3>
+          <p class="text-sm text-gray-500">By Youssef Mahmoud</p>
+
+          <div class="flex items-center gap-4 text-sm mt-2 text-gray-500">
+            <span>⭐ 4.9</span>
+            <span>👥 2,943 students</span>
+          </div>
+
+          <div class="mt-2 text-sm text-gray-500">
+            <span>⏱ 18 Hours • 85 Lessons</span>
+          </div>
+
+          <div class="w-full bg-success rounded-full h-2 mt-3">
+            <div class="bg-success h-2 rounded-full" style="width: 100%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">All lessons completed</p>
+
+          <button class="btn btn-outline btn-success w-full mt-4 rounded-xl">Review Course</button>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<footer class="bg-gradient-to-r from-slate-900 to-slate-800 text-gray-300 px-4 sm:px-6 lg:px-10 pt-16 lg:pt-20 pb-8">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
+            K
+          </div>
+          <span class="text-xl font-semibold text-white">konned</span>
+        </div>
+
+        <p class="text-gray-400 leading-relaxed">
+          We provide high-quality online courses to help you grow your skills and advance your career.
+          Learn from top instructors worldwide.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-6 text-lg">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="hover:text-white cursor-pointer transition">Home</a></li>
+          <li><a href="all-courses.html" class="hover:text-white cursor-pointer transition">All Courses</a></li>
+          <li><a class="hover:text-white cursor-pointer transition">My Courses</a></li>
+          <li><a class="hover:text-white cursor-pointer transition">About Us</a></li>
+          <li><a class="hover:text-white cursor-pointer transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-6 text-lg">Categories</h4>
+        <ul class="space-y-3">
+          <li class="hover:text-white cursor-pointer transition">Design</li>
+          <li class="hover:text-white cursor-pointer transition">Programming</li>
+          <li class="hover:text-white cursor-pointer transition">Marketing</li>
+          <li class="hover:text-white cursor-pointer transition">Business</li>
+          <li class="hover:text-white cursor-pointer transition">Photography</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-6 text-lg">Contact Info</h4>
+        <ul class="space-y-4">
+          <li>📧 support@konned.com</li>
+          <li>📞 +1 (555) 123-4567</li>
+          <li>📍 123 Learning Street, Knowledge City</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-slate-700 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+      <p>© 2026 Konned. All rights reserved.</p>
+
+      <div class="flex gap-6">
+        <a class="hover:text-white cursor-pointer transition">Privacy Policy</a>
+        <a class="hover:text-white cursor-pointer transition">Terms of Service</a>
+        <a class="hover:text-white cursor-pointer transition">Cookie Policy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
