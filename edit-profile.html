@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" dir="ltr" data-theme="light">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit Profile - Konned</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Settings - Konned</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 
   <script>
     tailwind.config = {
@@ -19,69 +20,401 @@
       }
     }
   </script>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+  </style>
 </head>
 
-<body class="bg-base-200 min-h-screen">
+<body class="bg-base-100">
 
-<div class="max-w-3xl mx-auto py-16 px-6">
-
-  <div class="card bg-base-100 shadow-2xl rounded-3xl p-10">
-
-    <h2 class="text-3xl font-bold mb-8">Edit Profile</h2>
-
-    <form>
-
-      <div class="form-control mb-4">
-        <label class="label">
-          <span class="label-text font-semibold">Full Name</span>
+  <div class="navbar bg-base-100 px-4 sm:px-6 lg:px-10 shadow-sm fixed top-0 left-0 w-full z-50">
+    <div class="navbar-start">
+      <div class="dropdown lg:hidden">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
         </label>
-        <input type="text" class="input input-bordered rounded-lg" value="John Anderson">
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">All Courses</a></li>
+          <li><a>My Courses</a></li>
+          <li><a>About Us</a></li>
+          <li><a>Contact</a></li>
+        </ul>
       </div>
 
-      <div class="form-control mb-4">
-        <label class="label">
-          <span class="label-text font-semibold">Email</span>
-        </label>
-        <input type="email" class="input input-bordered rounded-lg" value="john.anderson@email.com">
-      </div>
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-primaryBlue text-white rounded-lg flex items-center justify-center font-bold text-lg">
+          K
+        </div>
+        <span class="font-semibold text-lg sm:text-xl">konned</span>
+      </a>
+    </div>
 
-      <div class="form-control mb-4">
-        <label class="label">
-          <span class="label-text font-semibold">Phone</span>
-        </label>
-        <input type="tel" class="input input-bordered rounded-lg">
-      </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 gap-2 font-medium">
+        <li><a href="index.html">Home</a></li>
+        <li><a>All Courses</a></li>
+        <li><a>My Courses</a></li>
+        <li><a>About Us</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </div>
 
-      <div class="form-control mb-4">
-        <label class="label">
-          <span class="label-text font-semibold">Bio</span>
-        </label>
-        <textarea class="textarea textarea-bordered rounded-lg h-24">
-Passionate learner exploring UX design and web development.
-        </textarea>
-      </div>
+    <div class="navbar-end gap-2 sm:gap-4">
+      <input type="text" placeholder="Search courses..."
+        class="input input-bordered input-sm sm:input-md w-32 sm:w-48 md:w-64 rounded-full hidden sm:block" />
 
-      <div class="form-control mb-6">
-        <label class="label">
-          <span class="label-text font-semibold">Profile Picture</span>
-        </label>
-        <input type="file" class="file-input file-input-bordered rounded-lg">
-      </div>
-
-      <div class="flex gap-4">
-        <a href="profile.html" class="btn btn-outline flex-1 rounded-lg">
-          Cancel
-        </a>
-        <button type="submit" class="btn btn-primary flex-1 rounded-lg">
-          Save Changes
+      <div class="indicator">
+        <span class="indicator-item badge badge-error badge-xs"></span>
+        <button class="btn btn-ghost btn-circle btn-sm sm:btn-md">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
         </button>
       </div>
 
-    </form>
-
+      <button class="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden ring-2 ring-offset-2 ring-primaryBlue">
+        <a href="profile.html">
+          <img src="https://cdn-icons-png.flaticon.com/128/3242/3242257.png" alt="User" class="w-full h-full object-cover">
+        </a>
+      </button>
+    </div>
   </div>
+  <div class="pt-20"></div>
 
-</div>
+  <section class="px-4 sm:px-6 lg:px-10 py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="mb-6">
+        <a href="profile.html" class="btn btn-ghost btn-sm gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Profile
+        </a>
+      </div>
+
+      <div class="card bg-base-100 shadow-2xl rounded-3xl overflow-hidden">
+        <div class="p-8">
+          <h1 class="text-3xl font-bold mb-2">Profile Settings</h1>
+          <p class="text-gray-600 mb-8">Manage your account settings and preferences</p>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4">Profile Photo</h2>
+            <div class="flex items-center gap-6">
+              <div class="avatar">
+                <div class="w-24 h-24 rounded-full ring ring-primaryBlue ring-offset-4">
+                  <img src="https://cdn-icons-png.flaticon.com/128/3242/3242257.png" alt="Profile" />
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-primary btn-sm rounded-lg mb-2">Upload New Photo</button>
+                <button class="btn btn-ghost btn-sm rounded-lg">Remove</button>
+                <p class="text-xs text-gray-500 mt-2">JPG, PNG or GIF. Max size 2MB.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4">Personal Information</h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">First Name</span>
+                </label>
+                <input type="text" value="John" class="input input-bordered rounded-lg" />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">Last Name</span>
+                </label>
+                <input type="text" value="Anderson" class="input input-bordered rounded-lg" />
+              </div>
+
+              <div class="form-control sm:col-span-2">
+                <label class="label">
+                  <span class="label-text font-medium">Email Address</span>
+                </label>
+                <input type="email" value="john.anderson@email.com" class="input input-bordered rounded-lg" />
+              </div>
+
+              <div class="form-control sm:col-span-2">
+                <label class="label">
+                  <span class="label-text font-medium">Phone Number</span>
+                </label>
+                <input type="tel" placeholder="+1 (555) 000-0000" class="input input-bordered rounded-lg" />
+              </div>
+
+              <div class="form-control sm:col-span-2">
+                <label class="label">
+                  <span class="label-text font-medium">Bio</span>
+                </label>
+                <textarea class="textarea textarea-bordered rounded-lg h-24"
+                  placeholder="Tell us about yourself...">Passionate learner exploring UX design and web development. Currently working on building a portfolio of design projects and improving my skills through online courses.</textarea>
+                <label class="label">
+                  <span class="label-text-alt text-gray-500">Brief description for your profile</span>
+                </label>
+              </div>
+
+              <div class="form-control sm:col-span-2">
+                <label class="label">
+                  <span class="label-text font-medium">Location</span>
+                </label>
+                <input type="text" placeholder="City, Country" class="input input-bordered rounded-lg" />
+              </div>
+
+              <div class="form-control sm:col-span-2">
+                <label class="label">
+                  <span class="label-text font-medium">Website</span>
+                </label>
+                <input type="url" placeholder="https://" class="input input-bordered rounded-lg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4">Interests & Skills</h2>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-medium">Your Skills</span>
+              </label>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <div class="badge badge-primary badge-lg gap-2">
+                  UX Design
+                  <button class="text-white hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="badge badge-primary badge-lg gap-2">
+                  Web Development
+                  <button class="text-white hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="badge badge-primary badge-lg gap-2">
+                  UI Design
+                  <button class="text-white hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="badge badge-outline badge-lg gap-2">
+                  Marketing
+                  <button class="hover:text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="join">
+                <input type="text" placeholder="Add new skill..."
+                  class="input input-bordered rounded-l-lg join-item flex-1" />
+                <button class="btn btn-primary join-item rounded-r-lg">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4">Email Preferences</h2>
+            <div class="space-y-4">
+              <div class="form-control">
+                <label class="label cursor-pointer justify-start gap-4">
+                  <input type="checkbox" checked class="checkbox checkbox-primary" />
+                  <div>
+                    <span class="label-text font-medium block">Course Updates</span>
+                    <span class="label-text-alt text-gray-500">Get notified about new lessons and course updates</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="form-control">
+                <label class="label cursor-pointer justify-start gap-4">
+                  <input type="checkbox" checked class="checkbox checkbox-primary" />
+                  <div>
+                    <span class="label-text font-medium block">Weekly Newsletter</span>
+                    <span class="label-text-alt text-gray-500">Receive weekly tips and featured courses</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="form-control">
+                <label class="label cursor-pointer justify-start gap-4">
+                  <input type="checkbox" class="checkbox checkbox-primary" />
+                  <div>
+                    <span class="label-text font-medium block">Promotional Emails</span>
+                    <span class="label-text-alt text-gray-500">Get special offers and discounts</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="form-control">
+                <label class="label cursor-pointer justify-start gap-4">
+                  <input type="checkbox" checked class="checkbox checkbox-primary" />
+                  <div>
+                    <span class="label-text font-medium block">Certificate Notifications</span>
+                    <span class="label-text-alt text-gray-500">Be notified when you earn certificates</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4">Change Password</h2>
+            <div class="space-y-4">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">Current Password</span>
+                </label>
+                <input type="password" class="input input-bordered rounded-lg" />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">New Password</span>
+                </label>
+                <input type="password" class="input input-bordered rounded-lg" />
+                <label class="label">
+                  <span class="label-text-alt text-gray-500">Must be at least 8 characters</span>
+                </label>
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">Confirm New Password</span>
+                </label>
+                <input type="password" class="input input-bordered rounded-lg" />
+              </div>
+
+              <button class="btn btn-primary rounded-lg">Update Password</button>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4 text-error">Danger Zone</h2>
+            <div class="alert alert-error rounded-2xl">
+              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              <div class="flex-1">
+                <h3 class="font-bold">Delete Account</h3>
+                <p class="text-sm">Once you delete your account, there is no going back. Please be certain.</p>
+              </div>
+              <button class="btn btn-sm btn-outline">Delete Account</button>
+            </div>
+          </div>
+
+          <div class="flex gap-4 pt-6">
+            <button class="btn btn-primary rounded-lg flex-1 sm:flex-none">Save Changes</button>
+            <button class="btn btn-ghost rounded-lg flex-1 sm:flex-none">Cancel</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-gradient-to-r from-slate-900 to-slate-800 text-gray-300 px-4 sm:px-6 lg:px-10 pt-16 lg:pt-20 pb-8">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
+              K
+            </div>
+            <span class="text-xl font-semibold text-white">konned</span>
+          </div>
+
+          <p class="text-gray-400 leading-relaxed">
+            We provide high-quality online courses to help you grow your skills and advance your career.
+            Learn from top instructors worldwide.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-6 text-lg">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="hover:text-white cursor-pointer transition">Home</a></li>
+            <li><a href="courses.html" class="hover:text-white cursor-pointer transition">All Courses</a></li>
+            <li><a class="hover:text-white cursor-pointer transition">My Courses</a></li>
+            <li><a class="hover:text-white cursor-pointer transition">About Us</a></li>
+            <li><a class="hover:text-white cursor-pointer transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-6 text-lg">Categories</h4>
+          <ul class="space-y-3">
+            <li class="hover:text-white cursor-pointer transition">Design</li>
+            <li class="hover:text-white cursor-pointer transition">Programming</li>
+            <li class="hover:text-white cursor-pointer transition">Marketing</li>
+            <li class="hover:text-white cursor-pointer transition">Business</li>
+            <li class="hover:text-white cursor-pointer transition">Photography</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-6 text-lg">Contact Info</h4>
+          <ul class="space-y-4">
+            <li>📧 support@konned.com</li>
+            <li>📞 +1 (555) 123-4567</li>
+            <li>📍 123 Learning Street, Knowledge City</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div
+        class="border-t border-slate-700 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+        <p>© 2026 Konned. All rights reserved.</p>
+
+        <div class="flex gap-6">
+          <a class="hover:text-white cursor-pointer transition">Privacy Policy</a>
+          <a class="hover:text-white cursor-pointer transition">Terms of Service</a>
+          <a class="hover:text-white cursor-pointer transition">Cookie Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
 
 </body>
+
 </html>
