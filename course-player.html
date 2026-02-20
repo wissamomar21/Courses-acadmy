@@ -122,12 +122,51 @@
 
       <button class="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden ring-2 ring-offset-2 ring-primaryBlue">
         <a href="profile.html">
-          <img src="images/profile-photo.png" alt="User" class="w-full h-full object-cover">
+          <img src="https://cdn-icons-png.flaticon.com/128/3242/3242257.png" alt="User"
+            class="w-full h-full object-cover">
         </a>
       </button>
     </div>
   </div>
-  <div class="pt-20"></div>
+  <div class="pt-20">
+    <div class="bg-gradient-to-r from-primaryBlue to-blue-600 text-white px-4 sm:px-6 lg:px-10 py-8">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <div class="breadcrumbs text-sm text-blue-100 mb-2">
+            <ul>
+              <li><a href="my-courses.html">My Courses</a></li>
+              <li>UX Design Fundamentals</li>
+            </ul>
+          </div>
+          <h1 class="text-3xl font-bold mb-2">UX Design Fundamentals</h1>
+          <p class="text-blue-100">By Ahmed Mohamed</p>
+
+          <div class="flex flex-wrap gap-4 mt-4 text-sm">
+            <span>⭐ 4.8 (1,234 reviews)</span>
+            <span>👥 1,234 students</span>
+            <span>⏱ 8 Hours</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <button onclick="unsubscribe_modal.showModal()" class="btn btn-error btn-outline rounded-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            Unsubscribe from Course
+          </button>
+
+          <div class="stats bg-white text-gray-800 shadow">
+            <div class="stat py-3 px-6">
+              <div class="stat-title text-xs">Your Progress</div>
+              <div class="stat-value text-2xl text-primaryBlue">65%</div>
+              <div class="stat-desc">29 of 45 lessons</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section class="px-4 sm:px-6 lg:px-10 py-6">
     <div class="max-w-[1800px] mx-auto">
@@ -147,7 +186,8 @@
 
           <div class="bg-base-100 rounded-2xl shadow-xl overflow-hidden">
             <div class="video-container">
-              <video controls class="w-full" poster="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1200">
+              <video controls class="w-full"
+                poster="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1200">
                 <source src="sample-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -165,13 +205,16 @@
               </div>
               <div class="flex gap-2">
                 <button class="btn btn-circle btn-outline">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                 </button>
                 <button class="btn btn-circle btn-outline">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                   </svg>
                 </button>
               </div>
@@ -179,15 +222,20 @@
 
             <div class="flex items-center gap-6 text-sm text-gray-600 mb-6">
               <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>8:30</span>
               </div>
               <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
                 <span>1,234 views</span>
               </div>
@@ -198,22 +246,26 @@
             <div class="mb-6">
               <h3 class="font-semibold text-lg mb-3">About this lesson</h3>
               <p class="text-gray-700 leading-relaxed">
-                In this introductory lesson, you'll learn the fundamental concepts of UX design. We'll explore what UX design really means,
-                why it's important for digital products, and how it differs from other design disciplines. You'll gain a solid understanding
+                In this introductory lesson, you'll learn the fundamental concepts of UX design. We'll explore what UX
+                design really means,
+                why it's important for digital products, and how it differs from other design disciplines. You'll gain a
+                solid understanding
                 of the core principles that will guide you throughout this course.
               </p>
             </div>
 
             <div class="flex flex-wrap gap-3">
               <button class="btn btn-outline flex-1 sm:flex-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
                 Previous
               </button>
               <button class="btn btn-primary flex-1 sm:flex-none">
                 Next Lesson
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
               </button>
@@ -232,10 +284,13 @@
               <div>
                 <h3 class="font-semibold text-lg mb-3">Lesson Resources</h3>
                 <div class="space-y-2">
-                  <div class="flex items-center justify-between p-4 bg-base-200 rounded-lg hover:bg-base-300 cursor-pointer transition">
+                  <div
+                    class="flex items-center justify-between p-4 bg-base-200 rounded-lg hover:bg-base-300 cursor-pointer transition">
                     <div class="flex items-center gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primaryBlue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primaryBlue" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                       </svg>
                       <div>
                         <div class="font-medium">UX Design Introduction.pdf</div>
@@ -243,16 +298,21 @@
                       </div>
                     </div>
                     <button class="btn btn-sm btn-ghost">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
                     </button>
                   </div>
 
-                  <div class="flex items-center justify-between p-4 bg-base-200 rounded-lg hover:bg-base-300 cursor-pointer transition">
+                  <div
+                    class="flex items-center justify-between p-4 bg-base-200 rounded-lg hover:bg-base-300 cursor-pointer transition">
                     <div class="flex items-center gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primaryBlue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primaryBlue" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                       </svg>
                       <div>
                         <div class="font-medium">Additional Reading Resources</div>
@@ -260,8 +320,10 @@
                       </div>
                     </div>
                     <button class="btn btn-sm btn-ghost">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </button>
                   </div>
@@ -305,10 +367,12 @@
                     </div>
                   </div>
                   <div class="collapse-content p-0">
-                    <div class="playlist-item active flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent">
+                    <div
+                      class="playlist-item active flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent">
                       <div class="flex-shrink-0">
                         <div class="w-16 h-12 rounded overflow-hidden bg-base-200 flex items-center justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primaryBlue" fill="currentColor" viewBox="0 0 24 24">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primaryBlue" fill="currentColor"
+                            viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z" />
                           </svg>
                         </div>
@@ -323,10 +387,12 @@
                       </div>
                     </div>
 
-                    <div class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent">
+                    <div
+                      class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent">
                       <div class="flex-shrink-0">
                         <div class="w-16 h-12 rounded overflow-hidden bg-base-200">
-                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100" class="w-full h-full object-cover" />
+                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100"
+                            class="w-full h-full object-cover" />
                         </div>
                       </div>
                       <div class="flex-1 min-w-0">
@@ -337,10 +403,12 @@
                       </div>
                     </div>
 
-                    <div class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
+                    <div
+                      class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
                       <div class="flex-shrink-0">
                         <div class="w-16 h-12 rounded overflow-hidden bg-base-200">
-                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100" class="w-full h-full object-cover" />
+                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100"
+                            class="w-full h-full object-cover" />
                         </div>
                       </div>
                       <div class="flex-1 min-w-0">
@@ -352,10 +420,12 @@
                       </div>
                     </div>
 
-                    <div class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
+                    <div
+                      class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
                       <div class="flex-shrink-0">
                         <div class="w-16 h-12 rounded overflow-hidden bg-base-200">
-                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100" class="w-full h-full object-cover" />
+                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100"
+                            class="w-full h-full object-cover" />
                         </div>
                       </div>
                       <div class="flex-1 min-w-0">
@@ -367,11 +437,14 @@
                       </div>
                     </div>
 
-                    <div class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
+                    <div
+                      class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
                       <div class="flex-shrink-0">
                         <div class="w-16 h-12 rounded overflow-hidden bg-base-200 flex items-center justify-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                           </svg>
                         </div>
                       </div>
@@ -395,10 +468,12 @@
                     </div>
                   </div>
                   <div class="collapse-content p-0">
-                    <div class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
+                    <div
+                      class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
                       <div class="flex-shrink-0">
                         <div class="w-16 h-12 rounded overflow-hidden bg-base-200">
-                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100" class="w-full h-full object-cover" />
+                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100"
+                            class="w-full h-full object-cover" />
                         </div>
                       </div>
                       <div class="flex-1 min-w-0">
@@ -410,10 +485,12 @@
                       </div>
                     </div>
 
-                    <div class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
+                    <div
+                      class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
                       <div class="flex-shrink-0">
                         <div class="w-16 h-12 rounded overflow-hidden bg-base-200">
-                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100" class="w-full h-full object-cover" />
+                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100"
+                            class="w-full h-full object-cover" />
                         </div>
                       </div>
                       <div class="flex-1 min-w-0">
@@ -425,10 +502,12 @@
                       </div>
                     </div>
 
-                    <div class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
+                    <div
+                      class="playlist-item flex items-center gap-3 p-4 cursor-pointer transition border-l-4 border-transparent opacity-60">
                       <div class="flex-shrink-0">
                         <div class="w-16 h-12 rounded overflow-hidden bg-base-200">
-                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100" class="w-full h-full object-cover" />
+                          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=100"
+                            class="w-full h-full object-cover" />
                         </div>
                       </div>
                       <div class="flex-1 min-w-0">
@@ -529,7 +608,8 @@
     </div>
   </section>
 
-  <footer class="bg-gradient-to-r from-slate-900 to-slate-800 text-gray-300 px-4 sm:px-6 lg:px-10 pt-16 lg:pt-20 pb-8 mt-12">
+  <footer
+    class="bg-gradient-to-r from-slate-900 to-slate-800 text-gray-300 px-4 sm:px-6 lg:px-10 pt-16 lg:pt-20 pb-8 mt-12">
     <div class="max-w-7xl mx-auto">
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -594,17 +674,6 @@
 
     </div>
   </footer>
-
-  <script>
-    const playlistItems = document.querySelectorAll('.playlist-item:not(.opacity-60)');
-    playlistItems.forEach(item => {
-      item.addEventListener('click', () => {
-        document.querySelector('.playlist-item.active')?.classList.remove('active');
-        item.classList.add('active');
-      });
-    });
-  </script>
-
 </body>
 
 </html>
